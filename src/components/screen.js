@@ -11,10 +11,11 @@ class screen extends Component {
     }
 
     render() {
+        const {active , menuItems,songUrl}= this.props;
         return (
             <div className="screen">
                 <Navbar />
-                <MenuContainer />
+                <MenuContainer  menuItems={menuItems} active={active} songUrl={songUrl}/>
 
                 
             </div>

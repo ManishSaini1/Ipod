@@ -8,10 +8,12 @@ class Container extends React.Component {
  
 render()
 {
-  return(
-     
+  const {active , menuItems,songUrl}= this.props;
+  console.log("props", this.props);
+
+  return(  
     <div className="main-container">
-        <Screen />
+        <Screen  menuItems={menuItems} active={active} songUrl={songUrl}/>
          <Wheel />
       </div>
   )

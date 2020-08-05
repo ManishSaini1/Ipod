@@ -28,17 +28,30 @@
 }
  
 
-.menu-items li{
+.list-items{
     font-size: 1rem;
     /* margin-top: 5%; */
     padding: 10px 0;
     justify-content: center;
     /* padding-bottom: 12%;     */
 }
-.menu-items li:hover
+/* .menu-items li:hover
 {
     background-color: #3796DC;
     cursor: pointer;
+} */
+.active
+{
+    background-color: #3796DC;
+
+}
+.active::after
+{
+    position: absolute;
+    margin-left: 65px;
+
+    content: ">";
+
 }
 .menu-items li span
 {
