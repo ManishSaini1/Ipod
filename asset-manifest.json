@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Ipod/static/css/main.e5d2ce30.chunk.css",
+    "main.js": "/Ipod/static/js/main.52a66440.chunk.js",
+    "main.js.map": "/Ipod/static/js/main.52a66440.chunk.js.map",
+    "runtime-main.js": "/Ipod/static/js/runtime-main.f181fb6e.js",
+    "runtime-main.js.map": "/Ipod/static/js/runtime-main.f181fb6e.js.map",
+    "static/js/2.96943f7c.chunk.js": "/Ipod/static/js/2.96943f7c.chunk.js",
+    "static/js/2.96943f7c.chunk.js.map": "/Ipod/static/js/2.96943f7c.chunk.js.map",
+    "index.html": "/Ipod/index.html",
+    "precache-manifest.e6338218d56f96307290b45cbd82437c.js": "/Ipod/precache-manifest.e6338218d56f96307290b45cbd82437c.js",
+    "service-worker.js": "/Ipod/service-worker.js",
+    "static/css/main.e5d2ce30.chunk.css.map": "/Ipod/static/css/main.e5d2ce30.chunk.css.map",
+    "static/js/2.96943f7c.chunk.js.LICENSE.txt": "/Ipod/static/js/2.96943f7c.chunk.js.LICENSE.txt",
+    "static/media/Laung Gwacha.mp3": "/Ipod/static/media/Laung Gwacha.f58a59fa.mp3",
+    "static/media/Let Me Love You.mp3": "/Ipod/static/media/Let Me Love You.13b23bf9.mp3",
+    "static/media/Shape of you.mp3": "/Ipod/static/media/Shape of you.42cb592f.mp3",
+    "static/media/laung_gwacha.jpg": "/Ipod/static/media/laung_gwacha.a4fb5517.jpg",
+    "static/media/music.jpeg": "/Ipod/static/media/music.8f8a3880.jpeg",
+    "static/media/shape_of_you.png": "/Ipod/static/media/shape_of_you.220ba5c7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f181fb6e.js",
+    "static/js/2.96943f7c.chunk.js",
+    "static/css/main.e5d2ce30.chunk.css",
+    "static/js/main.52a66440.chunk.js"
+  ]
+}
