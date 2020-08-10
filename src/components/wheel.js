@@ -12,40 +12,61 @@ import {
 class Wheel extends React.Component {
   constructor() {
     super();
-    
-      this.angle= 0
-  
+
+    this.angle = 0;
   }
   componentDidMount() {
-    const {changeMenuForward, active, currentMenu , changeMenuBackward}=this.props;
+    const {
+      togglePlayPause,
+      active,
+      changeMenuBackward,
+      seekSongReverse,
+      seekSongForward,
+    } = this.props;
+    console.log("IN wheel .js file", this.props); 
     var zt = new ZingTouch.Region(document.body);
     var playPause = document.getElementById("play");
     var wheel = document.getElementById("wheel");
-    const menu=document.getElementById("menu");
-    const smallWheel= document.getElementById("small-wheel");
+    const menu = document.getElementById("menu");
+    const smallWheel = document.getElementById("small-wheel");
+    var backward = document.getElementById("backward");
+    var forward = document.getElementById("forward");
+    const longTapGesture = new ZingTouch.Tap({
+      maxDelay: 10000,
+      numInputs: 1,
+      tolerance: 1,
+    });
+
+    zt.bind(backward, longTapGesture, function (e) {
+      seekSongReverse(e);
+    });
+    zt.bind(forward, longTapGesture, function (e) {
+      seekSongForward(e);
+    });
     const wheelContorll = this.wheelControll;
     zt.bind(wheel, "rotate", function (e) {
       wheelContorll(e);
       // console.log(e);
     });
     zt.bind(playPause, "tap", function (e) {
-      console.log(" I am here");
+      console.log(" I am here togglePlay Pause");
+      togglePlayPause();
     });
-    zt.bind(smallWheel,"tap", function(e)
-    {
-      console.log("********************************************************", active);
+    zt.bind(smallWheel, "tap", function (e) {
+      console.log(
+        "********************************************************",
+        active
+      );
       // changeMenuForward(active ,currentMenu);
     });
-    zt.bind(menu, 'tap', function(e)
-    {
+    zt.bind(menu, "tap", function (e) {
       changeMenuBackward();
-    })
+    });
   }
   wheelControll = (e) => {
-    const { updateActiveMenu , currentMenu, active} = this.props;
+    const { updateActiveMenu, currentMenu, active } = this.props;
     console.log("In wheel Rootation active", active);
     // console.log("UpdateActive Menu",updateActiveMenu);
-
 
     if (e.detail.distanceFromOrigin === 0) {
       this.angle = e.detail.angle;
@@ -76,21 +97,28 @@ class Wheel extends React.Component {
   };
 
   render() {
-    const {changeMenuForward, active, currentMenu}= this.props;
+    const { changeMenuForward, active, currentMenu } = this.props;
     return (
       <div className="outer-wheel" id="wheel">
-        <div className="forward white absolute">
+        <div className="forward white absolute" id="forward">
           <FontAwesomeIcon icon={faFastForward} color="white" />
         </div>
-        <div className="backward white absolute">
+        <div className="backward white absolute" id="backward">
           <FontAwesomeIcon icon={faFastBackward} color="white" />
         </div>
-        <div className="menu white absolute" id="menu">Menu</div>
+        <div className="menu white absolute" id="menu">
+          Menu
+        </div>
         <div className="play-pause white absolute" id="play">
           <FontAwesomeIcon icon={faPlay} color="white" />
           <FontAwesomeIcon icon={faPause} color="white" />
         </div>
-        <div id="small-wheel" onClick={()=>{changeMenuForward(active ,currentMenu)}}></div>
+        <div
+          id="small-wheel"
+          onClick={() => {
+            changeMenuForward(active, currentMenu);
+          }}
+        ></div>
       </div>
     );
   }

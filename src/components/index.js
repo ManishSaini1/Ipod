@@ -5,4 +5,6 @@ import Navbar from "./navbar";
 import MenuContainer from './menuContainer';
 import Music from "./music";
 import LockScreen from './lockScreen';
-export {Wheel, Container , Screen, Navbar, MenuContainer ,Music, LockScreen};
+import Playing from  './playing';
+import Songs from './songs';
+export {Wheel, Container , Screen, Navbar, MenuContainer ,Music, LockScreen,Songs, Playing};

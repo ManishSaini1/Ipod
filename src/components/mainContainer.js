@@ -6,31 +6,63 @@ class Container extends React.Component {
   render() {
     const {
       active,
-      menuItems,
-      songUrl,
       updateActiveMenu,
-      changeMenuForward,
       currentMenu,
       changeMenuBackward,
+      changeMenuForward,
+      menuItems,
       musicItems,
+      togglePlayPause,
+      songItems,
+      playing,
+      songIndex,
+      theme,
+      audio,
+      songUrl,
+      songImgUrl,
+      seekSongForward,
+      seekSongReverse,
+      wheelColor,
+      wallpaper,
+      wallpaperItems,
+      noty,
+      setNoty,
+      notifyText,
+      changeSongIfComplete
     } = this.props;
+
     console.log("props", this.props);
 
     return (
       <div className="main-container">
         <Screen
-          menuItems={menuItems}
+          songIndex={songIndex}
+          playing={playing}
           active={active}
-          songUrl={songUrl}
-          currentMenu={currentMenu}
           musicItems={musicItems}
+          menuItems={menuItems}
+          currentMenu={currentMenu}
+          songItems={songItems}
+          audio={audio}
+          songUrl={songUrl}
+          songImgUrl={songImgUrl}
+          wallpaper={wallpaper}
+          wallpaperItems={wallpaperItems}
+          noty={noty}
+          setNoty={setNoty}
+          notifyText={notifyText}
+          seekSongForward={seekSongForward}
+          changeSongIfComplete={changeSongIfComplete}
         />
         <Wheel
           updateActiveMenu={updateActiveMenu}
           changeMenuForward={changeMenuForward}
           currentMenu={currentMenu}
           active={active}
+          togglePlayPause={togglePlayPause}
           changeMenuBackward={changeMenuBackward}
+          seekSongReverse={seekSongReverse}
+          seekSongForward={seekSongForward}
         />
       </div>
     );

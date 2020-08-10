@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBatteryFull, faWifi,faPlay, faPause} from '@fortawesome/free-solid-svg-icons'
+import playing from './playing';
 
 class navbar extends Component {
     constructor(props) {
@@ -23,6 +24,8 @@ class navbar extends Component {
 
     render() {
         const {time}= this.state;
+        const {playing}=this.props;
+        console.log("IN navbar playing", playing);
         return (
             <div  className="navbar">
                 <div className="heading">Ipod
@@ -31,7 +34,9 @@ class navbar extends Component {
                 
                 <div className='time'>{time}</div>
                 <div className="play-battery">
-            {false && <div className="nav-play-pause"><  FontAwesomeIcon icon={faPause} />  <  FontAwesomeIcon size="1x" icon={faPlay}/></div> }  
+            {playing ? <div className="nav-play-pause"><  FontAwesomeIcon icon={faPause} /></div> 
+             :
+             <div className="nav-play-pause"><  FontAwesomeIcon size="1x" icon={faPlay}/></div> }  
                 <div className="full-battery"><FontAwesomeIcon icon={faBatteryFull}  color="green" /></div>
            </div>
             </div>
