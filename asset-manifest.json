@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Ipod/static/css/main.6451be5d.chunk.css",
+    "main.css": "/Ipod/static/css/main.7f18ce0e.chunk.css",
     "main.js": "/Ipod/static/js/main.6947c044.chunk.js",
     "main.js.map": "/Ipod/static/js/main.6947c044.chunk.js.map",
     "runtime-main.js": "/Ipod/static/js/runtime-main.f181fb6e.js",
@@ -8,9 +8,9 @@
     "static/js/2.771f62ca.chunk.js": "/Ipod/static/js/2.771f62ca.chunk.js",
     "static/js/2.771f62ca.chunk.js.map": "/Ipod/static/js/2.771f62ca.chunk.js.map",
     "index.html": "/Ipod/index.html",
-    "precache-manifest.a3d4cbf706f9798c52af9731fa485945.js": "/Ipod/precache-manifest.a3d4cbf706f9798c52af9731fa485945.js",
+    "precache-manifest.d3a91bd62a16486229372750bc0af772.js": "/Ipod/precache-manifest.d3a91bd62a16486229372750bc0af772.js",
     "service-worker.js": "/Ipod/service-worker.js",
-    "static/css/main.6451be5d.chunk.css.map": "/Ipod/static/css/main.6451be5d.chunk.css.map",
+    "static/css/main.7f18ce0e.chunk.css.map": "/Ipod/static/css/main.7f18ce0e.chunk.css.map",
     "static/js/2.771f62ca.chunk.js.LICENSE.txt": "/Ipod/static/js/2.771f62ca.chunk.js.LICENSE.txt",
     "static/media/EllieGouldingLoveMe .mp3": "/Ipod/static/media/EllieGouldingLoveMe .56185c09.mp3",
     "static/media/Its All About You - Sidhu Moose Wala (DjPunjab.Com).mp3": "/Ipod/static/media/Its All About You - Sidhu Moose Wala (DjPunjab.Com).ab25316f.mp3",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.f181fb6e.js",
     "static/js/2.771f62ca.chunk.js",
-    "static/css/main.6451be5d.chunk.css",
+    "static/css/main.7f18ce0e.chunk.css",
     "static/js/main.6947c044.chunk.js"
   ]
 }
