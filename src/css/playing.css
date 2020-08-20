@@ -30,11 +30,12 @@
 
 /* playing or not */
 .status{
-    margin-top: 20px;
+    margin-top: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    
 }
 
 /* progress of song duration */

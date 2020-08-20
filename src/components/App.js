@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "../index.css";
-import song2 from "../static/songs/Laung Gwacha.mp3";
-import song1 from "../static/songs/Shape of you.mp3";
-import song3 from "../static/songs/Let Me Love You.mp3";
+import song2 from "../static/songs/Tere Naal Jass Manak (1).mp3";
+import song1 from "../static/songs/EllieGouldingLoveMe .mp3";
+import song3 from "../static/songs/Its All About You - Sidhu Moose Wala (DjPunjab.Com).mp3";
 
-import song2Img from "../static/images/laung_gwacha.jpg";
-import song1Img from "../static/images/shape_of_you.png";
-import song3Img from "../static/images/let_me.jpg";
+import song2Img from "../static/images/JassManak.jpeg";
+import song1Img from "../static/images/EllieGoulding.jpeg";
+import song3Img from "../static/images/sidhuMooseAala.jpeg";
 
 import { Container } from "./index";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,13 +20,12 @@ class App extends Component {
       active: 0, //Active list item
       menuItems: ["Now Playing", "Music", "Games", "Settings"], //menu Items
       musicItems: ["All Songs", "Artist", "Albums"],
-      songUrl: ["..", "...", ".."],
       navigationStack: [],
       playing: false,
       currentMenu: -2,
       songItemsUrl: [song1, song2, song3], //songs list
       songImgItemsUrl: [song1Img, song2Img, song3Img], //song images list
-      songItems: ["Shape of You", "Laung Gwacha", "Let Me Love You"], //song names
+      songItems: ["Love me like you do", "Tera Naal Jass Manak", "It's all about You"], //song names
       songUrl: song1,
       songIndex: 0,
       songImgUrl: song1Img,
@@ -118,7 +117,7 @@ class App extends Component {
     console.log("**********************************************************************************8");
     console.log("In changeplayinh function",songUrl);
     console.log("In changeplayinh function", this.state.songUrl);
-    if(songUrl!=this.state.songUrl)
+    if(songUrl!==this.state.songUrl)
     { const songImgUrl = this.state.songImgItemsUrl[id];
       this.state.audio.pause();
       this.setState(
@@ -152,7 +151,7 @@ class App extends Component {
     const navigationStack = this.state.navigationStack.slice();
     console.log(" IN APP1", id);
     console.log(" IN APP2", fromMenu);
-    if (fromMenu == -2) {
+    if (fromMenu === -2) {
       navigationStack.push(this.state.currentMenu);
       this.setState({
         currentMenu: -1,
@@ -194,7 +193,7 @@ class App extends Component {
   };
   changeMenuBackward = () => {
     const navigationStack = this.state.navigationStack.slice();
-    if (this.state.currentMenu == -2) {
+    if (this.state.currentMenu === -2) {
       return;
     }
     const prevId = navigationStack.pop();
@@ -232,7 +231,7 @@ class App extends Component {
   
   // FUNCTION FOR : ON LONG PRESS OF FORWARD BUTTON TRACKS ARE SEEKED FORWARD
   seekSongForward = (e) => {
-    if(e=='x')
+    if(e==='x')
     {
       console.log("Details are undefined");
       return;
@@ -305,7 +304,6 @@ class App extends Component {
       <div className="App">
         <Container
           audio={audio}
-          songItems={songItems}
           playing={playing}
           togglePlayPause={this.togglePlayPause}
           songIndex={songIndex}

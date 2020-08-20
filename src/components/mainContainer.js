@@ -16,19 +16,17 @@ class Container extends React.Component {
       songItems,
       playing,
       songIndex,
-      theme,
       audio,
       songUrl,
       songImgUrl,
       seekSongForward,
       seekSongReverse,
-      wheelColor,
       wallpaper,
       wallpaperItems,
       noty,
       setNoty,
       notifyText,
-      changeSongIfComplete
+      changeSongIfComplete,
     } = this.props;
 
     console.log("props", this.props);

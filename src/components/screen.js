@@ -30,8 +30,8 @@ class screen extends Component {
     return (
       <div className="screen">
         <Navbar  playing={playing}/>
-        {currentMenu == -2 && <LockScreen></LockScreen>}
-        {currentMenu == -1 && (
+        {currentMenu === -2 && <LockScreen></LockScreen>}
+        {currentMenu === -1 && (
           <MenuContainer
             menuItems={menuItems}
             active={active}
@@ -41,7 +41,7 @@ class screen extends Component {
           />
         )}
 
-        {(currentMenu === 0 || currentMenu ==7) && (
+        {(currentMenu === 0 || currentMenu ===7) && (
           <Playing
             songImgUrl={songImgUrl}
             audio={audio}
@@ -53,12 +53,12 @@ class screen extends Component {
             changeSongIfComplete={  changeSongIfComplete}
           />
         )}
-        {currentMenu == 1 && <Music musicItems={musicItems} active={active} />}
-        {currentMenu == 2 && <div className="blank-div"> Games</div>}
-        {currentMenu == 3 && <div className="blank-div"> Setting</div>}
-        {currentMenu ==4 && <Songs songItems={songItems} active={active} />}
-        {currentMenu==5 && <div className="blank-div">Artist</div>}
-        {currentMenu==6 && <div className="blank-div">Albums</div>}
+        {currentMenu === 1 && <Music musicItems={musicItems} active={active} />}
+        {currentMenu === 2 && <div className="blank-div"> Games</div>}
+        {currentMenu === 3 && <div className="blank-div"> Setting</div>}
+        {currentMenu ===4 && <Songs songItems={songItems} active={active} />}
+        {currentMenu===5 && <div className="blank-div">Artist</div>}
+        {currentMenu===6 && <div className="blank-div">Albums</div>}
       </div>
     );
   }

@@ -27,19 +27,21 @@ class playing extends React.Component {
 
   // Render playing screen
   render() {
-    const { songItems, playing, songIndex, audio, songImgUrl ,seekSongForward,  changeSongIfComplete} = this.props;
+    const { songItems, playing, songIndex, audio, songImgUrl } = this.props;
     console.log("This current time", this.state.currentTime);
     // console.log("Song-imageUrl", songImgUrl);
     var currentTimeRender =
       Math.floor(this.state.currentTime / 60) +
       ":" +
       Math.floor(this.state.currentTime % 60);
+     var audioD=Math.floor(audio.duration)%60;
+      console.log("audio duration", audioD)
     var durationRender =
-      Math.floor(audio.duration / 60) + ":" + Math.floor(audio.duration % 60);
+      Math.floor(audio.duration / 60) + ":" + (audioD<10 ? `0${audioD}`: (Math.floor(audio.duration % 60)))  ;
     const percentageComplete = {
       width: (this.state.currentTime / audio.duration) * 100 + "%",
     };
-    console.log("Duraration Render",durationRender);
+    console.log("Duraration Render",audio.duration);
     console.log("Percentage Complete",percentageComplete.width);
     
     if (durationRender === "NaN:NaN") {
@@ -51,7 +53,7 @@ class playing extends React.Component {
         ":0" +
         Math.floor(this.state.currentTime % 60);
     }
-    if(durationRender!="NaN")
+    if(durationRender!=="NaN")
     {
         const finalTime=((durationRender/60)*60  + ((durationRender%60))  );   
         console.log("finalTime",finalTime);

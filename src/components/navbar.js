@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBatteryFull, faWifi,faPlay, faPause} from '@fortawesome/free-solid-svg-icons'
-import playing from './playing';
 
 class navbar extends Component {
     constructor(props) {
